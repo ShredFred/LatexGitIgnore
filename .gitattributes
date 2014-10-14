@@ -20,3 +20,11 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
+
+#Latex Additions
+*.tex diff=latex
+.gitconfig:
+
+[diff "latex"]
+    wordRegex = "\\\\[a-zA-Z]+|[{}]|\\\\.|[^\\{}[:space:]]+"
+    command = ~/bin/word-diff.sh
